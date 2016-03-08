@@ -15,16 +15,16 @@ define(["dojo/_base/declare", "dojox/html/entities", "dojo/_base/lang", "dojo/Ev
                     //The ID for a web map from ArcGIS Online (AGO)
                     //If not going to specify a Web Map in AGO, then use empty quotes ("") here
                  
-					webmap: "d1201eea7afb4ed49f08a310e9803f2f",      //"blank" default map; an OpenStreetMap basemap
+					webmap: "7d1a1d984f4343208babdfa814c306c4",      //"blank" default map; an OpenStreetMap basemap
                     // The URL to an ArcGIS Web Map- if not using ArcGIS.com.
                     // Can be relative to index.html. For example, if in basicviewer root- "webmap.js"
                     // If both webmap and webmapurl are empty, then a map must be programmatically defined in map.js
                     webmapurl: "webmap.js",
                     //Enter a description for the application. This description will appear in the left pane
                     //if no description is entered, the webmap description (if populated) will be used.
-                    description: "The Maryland iMap Template.  Updated 7/6/2015.  <br>Change this description in app.js or add one via your map on ArcGIS Online.<br><br><a href='http://imap.maryland.gov/Pages/template-server.aspx' target='_blank'>Help Documents</a><br><br><a href='Changes.txt' target='_blank'>Change Log<a> (text)",
+                    description: "Use this map to digitize agriculture BMP's in maryland.",
                     //specify an owner for the app - used by the print option. The default value will be the web map's owner
-                    owner: '',
+                    owner: 'Maryland Department of Agriculture',
 
                     //*** Layout ***                    
                     /* Specify a color theme for the iMap application. Valid options are:
@@ -38,13 +38,13 @@ define(["dojo/_base/declare", "dojox/html/entities", "dojo/_base/lang", "dojo/Ev
                         "earth1",
                         "earth2"         
                      */
-                    theme: "imap",
+                    theme: "blue",
                     //set to true to display the title
                     displaytitle: true,
                     //Enter a title, if no title is specified, the webmap's title is used.
-                    title: "",
+                    title: "MDA BMP Digitize Project",
                     //URL to title logo, if none specified, then defaults to assets/MDLogo.gif
-                    titleLogoUrl: "assets/MDlogo-small.gif",
+                    titleLogoUrl: "assets/MDAlogoreverse.png",
                     //The hyperlink for the title logo,
                     titleLogoLink: "http://www.maryland.gov/Pages/default.aspx",
                     //Provide an image and url for a logo that will be displayed as a clickable image
