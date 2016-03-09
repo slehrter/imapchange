@@ -14,8 +14,7 @@ define(["dojo/_base/declare", "dojox/html/entities", "dojo/_base/lang", "dojo/Ev
                     appid: "",
                     //The ID for a web map from ArcGIS Online (AGO)
                     //If not going to specify a Web Map in AGO, then use empty quotes ("") here
-                 
-					webmap: "7d1a1d984f4343208babdfa814c306c4",      //"blank" default map; an OpenStreetMap basemap
+                 					webmap: "7d1a1d984f4343208babdfa814c306c4",      //"blank" default map; an OpenStreetMap basemap
                     // The URL to an ArcGIS Web Map- if not using ArcGIS.com.
                     // Can be relative to index.html. For example, if in basicviewer root- "webmap.js"
                     // If both webmap and webmapurl are empty, then a map must be programmatically defined in map.js
@@ -25,7 +24,6 @@ define(["dojo/_base/declare", "dojox/html/entities", "dojo/_base/lang", "dojo/Ev
                     description: "Use this map to digitize agriculture BMP's in maryland.",
                     //specify an owner for the app - used by the print option. The default value will be the web map's owner
                     owner: 'Maryland Department of Agriculture',
-
                     //*** Layout ***                    
                     /* Specify a color theme for the iMap application. Valid options are:
                     	"imap" (default)
@@ -46,7 +44,7 @@ define(["dojo/_base/declare", "dojox/html/entities", "dojo/_base/lang", "dojo/Ev
                     //URL to title logo, if none specified, then defaults to assets/MDLogo.gif
                     titleLogoUrl: "assets/MDAlogoreverse.png",
                     //The hyperlink for the title logo,
-                    titleLogoLink: "http://www.maryland.gov/Pages/default.aspx",
+                    titleLogoLink: "http://www.mda.maryland.gov/Pages/default.aspx",
                     //Provide an image and url for a logo that will be displayed as a clickable image
                     //in the lower right corner of the map. If nothing is specified then the esri logo will appear.
                     //Example customLogoImage: "http://serverapi.arcgisonline.com/jsapi/arcgis/2.4compact/images/map/logo-med.png"
@@ -56,9 +54,7 @@ define(["dojo/_base/declare", "dojox/html/entities", "dojo/_base/lang", "dojo/Ev
                     },
                     //option to completely hide left pane, including splitter and toggle button.  Left Pane will become obsolete at runtime and not be available for any interaction.
                     //set to true will override any display of left pane widgets, the startupwidget config property (line 91) and the leftpanewidth property (line 65).
-
                     disableLeftPane: false,
-
                     //specify the width of the panel that holds the editor, legend, details
                     leftpanewidth: '350',
                     //specify the width of the panel that holds the TOC
@@ -101,15 +97,15 @@ define(["dojo/_base/declare", "dojox/html/entities", "dojo/_base/lang", "dojo/Ev
                     //Tab for Add Data - the ability to add provided REST services via AddLayers.js
                     adddata: true,
                     //Tab for the editor - still in development 
-                    displayeditor: false,
-                    
+                    displayeditor: true,
+
                     ////When editing you need to specify a proxyurl (see below) if the service is on a different domain
                     //Specify a proxy url if you will be editing, using the elevation profile or have secure services or web maps that are not shared with everyone.
                     proxyurl: "proxy.ashx",
 
                     //*** Tools ***
                     //Optional tools - set to false to hide the tool
-                    displaytimeslider: true,
+                    displaytimeslider: false,
                     //Print options - Default is to not display on mobile devices, but can be overriden manually or in AGO
                     displayprint: !(environment.TouchEnabled),
                     //Use either the Maryland print service or the ESRI print service for the printtask
@@ -148,8 +144,8 @@ define(["dojo/_base/declare", "dojox/html/entities", "dojo/_base/lang", "dojo/Ev
 
                     /*Controls on the map */
                     //controls on upper right corner
-                    displaysearch: true,
-                    showFeatureSearch: false,
+                    displaysearch: false,
+                    showFeatureSearch: true,
                     zoomtocounty: true,
                     //controls in map
                     displaylocation: true,
@@ -167,14 +163,14 @@ define(["dojo/_base/declare", "dojox/html/entities", "dojo/_base/lang", "dojo/Ev
                     //If the webmap uses Bing Maps data, you will need to provide your Bing Maps Key
                     bingmapskey: "",
                     //Modify this to point to your sharing service URL if you are using the portal
-                    sharingurl: "http://www.arcgis.com/sharing/content/items",
+                    sharingurl: "http://www.maryland.maps.arcgis.com/home/group.html?id=86685ec2541249f79b5daaf65fc7d86a",
                     //specify a group in ArcGIS.com that contains the basemaps to display in the basemap gallery
                     //This parameter will populate the basemap gallery with the basemaps listed in this group ONLY.
                     //Leave blank for AGO users to see all basemaps that are available to their username.
                     //If left blank for a public application with no AGO sign-on, or a protected application with an ArcGIS Server account (not AGO), the standard ESRI gallery will be loaded.
                     //example: title:'ArcGIS Online Basemaps' , owner:esri
                     basemapgroup: {
-                        title: 'MD iMAP Template Basemaps',
+                        title: 'MDA BMP Mapping',
                         owner: 'doit_gio'
                     },
                     //Enter the URL to a Geometry Service
